@@ -15,7 +15,7 @@ public class Application extends Controller {
 		person1.nama = "Ari Faldi";
 		person1.noiden = 123456;
 		
-		akun1 = new account("Firman", 12);
+		akun1 = new account("Davi", 10);
 		
         //return ok(views.html.index.render(person1, akun1));
 		return ok(views_home.html.welcome.render(person1, akun1));

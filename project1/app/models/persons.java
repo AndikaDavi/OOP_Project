@@ -4,8 +4,8 @@ public class persons {
 	public String nama;
 	public int noiden;
 	public void person() {
-		nama = "Firman Adi W";
-		noiden = 85;
+		nama = "Andika Davi Y";
+		noiden = 70;
 	}
 	
 	public String getnama() {
