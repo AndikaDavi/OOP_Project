@@ -2,35 +2,35 @@ package models;
 
 public class account {
 	private String nama;
-	private double balance;
+	private int balance;
 	
-	public account(double startingBalance){
+	public account(int startingBalance){
 		nama = "Unassigned";
 		balance = startingBalance;
 	}
 	
-	public account(String nama, double startingBalance) {
+	public account(String nama, int startingBalance) {
 		this.nama = nama;
 		balance = startingBalance;
 	}
 	
-	public void add(double val) {
+	public void add(int val) {
 		balance += val;
 	}
 	
-	public void deduct(double val) {
+	public void deduct(int val) {
 		balance -= val;
 	}
 	
-	public double getBalance() {
-		return balance;
+	public String getBalance() {
+		return "Rp "+balance+",00";
 	}
 	
 	public String getNama() {
 		return nama;
 	}
 	
-	public void setBalance(double val) {
+	public void setBalance(int val) {
 		balance = val;
 	}
 	
