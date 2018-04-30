@@ -1,0 +1,14 @@
+@(ticketForm: Form[Tiket])
+@import helper._
+@import views.html.ticket.tiketformfields
+@layout("Pesan Tiket"){
+	<h2>Add Tiket</h2>
+	@helper.form(action=routes.TiketController.save()){
+	
+	@tiketformfields(ticketForm)
+	
+	<button class="btn btn-primary" type="submit">
+	<i class="glyphicon glyphicon-plus"></i> Pesan Tiket 
+	</button>
+	}
+}

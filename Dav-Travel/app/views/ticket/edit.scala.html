@@ -1,0 +1,17 @@
+	
+@(ticketForm: Form[Tiket])
+@import helper._
+@import views.html.ticket.tiketformfields
+@layout("Cancel ticket"){
+	<h2>Cancel Tiket</h2>
+	@helper.form(action=routes.TiketController.update()){
+	
+	@tiketformfields(ticketForm)
+	
+	<button class="btn btn-success" type="submit">
+	<i class="glyphicon glyphicon-check"></i> Save 
+	</button>
+	@helper.inputText(ticketForm("id"),'_label->null,'hidden->"true",'hideIt->true)
+	
+	}
+}

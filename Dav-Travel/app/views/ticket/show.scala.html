@@ -1,0 +1,14 @@
+@* index Template File *@
+@(ticket: Tiket)
+
+
+@layout(ticket.kotatujuan){
+	<h2>@ticket.kotatujuan</h2>
+	<p>harga:@ticket.harga</p>
+	<p>Jumlah:@ticket.jumlah</p>
+	
+	<a class="btn btn-primary" href="@routes.TiketController.edit(ticket.id)">Edit</a>
+	<a class="btn btn-danger" href="@routes.TiketController.destroy(ticket.id)">Delete</a>
+
+	
+}

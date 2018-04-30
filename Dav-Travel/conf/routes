@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+GET		/Tiket						controllers.TiketController.index()
+GET		/Tiket/create				controllers.TiketController.create()
+GET		/Tiket/:id					controllers.TiketController.show(id: Integer)
+GET		/Tiket/edit/:id				controllers.TiketController.edit(id: Integer)
+POST	/Tiket/edit					controllers.TiketController.update()
+POST	/Tiket/create				controllers.TiketController.save()
+GET		/Tiket/delete/:id			controllers.TiketController.destroy(id: Integer)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
